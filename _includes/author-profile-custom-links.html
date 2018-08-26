@@ -1,0 +1,15 @@
+<!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+
+  {% if author.inspire %}
+    <li>
+      <a href="http://inspirehep.net/author/profile/{{ author.inspire }}">
+        <i class="fa fa-fw inSPIRE" aria-hidden="true"></i> inSPIRE
+      </a>
+    </li>
+  {% endif %}
