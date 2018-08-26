@@ -15,7 +15,16 @@ This paper provide derivation of the Kozachenko-Leonenko entropy estimate along 
 
 This first formulation of mutual information estimation is implemented in scikit-learn: [`sklearn.feature_selection.mutual_info_regression`](http://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.mutual_info_regression.html) and [`sklearn.feature_selection.mutual_info_classif`](http://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.mutual_info_classif.html).
 
-## Outline
+## Summary
+
+The authors showed empirically that
+* For various continuous distributions of $X$ and $Y$, if $X$ and $Y$ are independent, then both mutual information estimators are zero.
+* For Gaussian $X$ and $Y$ with $\sigma_{XY}$ up to $0.9$, the estimate with $k=1$ is in agreement with the exact value to within a couple percents.
+* $k$ is a hyper-parameter of the estimator.
+  For Gaussian distribution, a larger $k$ leads to lower statistical error but larger systematic error, and the increase in systematic error outweighs the decrease in statistical error.
+  Hence, the authors recommend $k=2,3,4$.
+
+## Derivation Outline
 
 This section captures the outline behind the derivation of the mutual information estimation for continuous variable.
 Please refer to the original paper for detailed derivation.
@@ -42,14 +51,6 @@ $$
 
 Hence, we have an estimate for mutual information if we have estimate for entropy and cross-entropy, $H(X, Y)$.
 
-## Summary
-
-The authors showed empirically that
-* For various continuous distributions of $X$ and $Y$, if $X$ and $Y$ are independent, then both mutual information estimators are zero.
-* For Gaussian $X$ and $Y$ with $\sigma_{XY}$ up to $0.9$, the estimate with $k=1$ is in agreement with the exact value to within a couple percents.
-* $k$ is a hyper-parameter of the estimator.
-  For Gaussian distribution, a larger $k$ leads to lower statistical error but larger systematic error, and the increase in systematic error outweighs the decrease in statistical error.
-  Hence, the authors recommend $k=2,3,4$.
 
 ## Kozachenko-Leonenko Estimator
 
