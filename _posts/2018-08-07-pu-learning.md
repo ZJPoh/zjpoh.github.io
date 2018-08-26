@@ -149,30 +149,30 @@ Notebook to produce these plots are at [here](https://github.com/zjpoh/zjpoh.git
 In this plot, I have 100k data with balanced class.
 This plot shows the shift in the decision boundary by applying (4).
 
-![Visualizing Boundary Shift](/assets/images/notebooks/elkan2008/viz_decision_boundary.jpeg)
+![Visualizing Boundary Shift](/assets/notebooks/elkan2008/plots/viz_decision_boundary.jpeg)
 
 ### Dependence of the Accuracy on the Size of Dataset
 
 This plot shows that as the accuracy improves as the available data increases.
 However, the accuracy stops improving after some threshold.
 
-![Visualizing Boundary Shift](/assets/images/notebooks/elkan2008/dependence_on_number_of_data.jpeg)
+![Visualizing Boundary Shift](/assets/notebooks/elkan2008/plots/dependence_on_number_of_data.jpeg)
 
 ### Dependence of the Accuracy on PU Ratio
 
 This plot, as expected, shows the more positive data we have, the higher the accuracy of the classifier.
 
-![Visualizing Boundary Shift](/assets/images/notebooks/elkan2008/dependence_pu_ratio.jpeg)
+![Visualizing Boundary Shift](/assets/notebooks/elkan2008/plots/dependence_pu_ratio.jpeg)
 
 ### Imbalance Data
 
-![Visualizing Boundary Shift](/assets/images/notebooks/elkan2008/imbalanced_data.jpeg)
+![Visualizing Boundary Shift](/assets/notebooks/elkan2008/plots/imbalanced_data.jpeg)
 
 ### Unlabeled not at Random
 
-![Visualizing Boundary Shift](/assets/images/notebooks/elkan2008/unlabeled_not_at_random.jpeg)
+![Visualizing Boundary Shift](/assets/notebooks/elkan2008/plots/unlabeled_not_at_random.jpeg)
 
 ### Non-linear Boundary
 
-![Visualizing Boundary Shift](/assets/images/notebooks/elkan2008/non_linear.jpeg)
+![Visualizing Boundary Shift](/assets/notebooks/elkan2008/plots/non_linear.jpeg)
 

@@ -1,6 +1,6 @@
 ---
-title: '[WIP] Estimating Mutual Information between Two Continuous variables'
-date: 2018-08-02
+title: 'Estimating Mutual Information between Two Continuous variables'
+date: 2018-08-26
 permalink: /posts/2018/08/mutual-info-continuous
 excerpt: 'This post is based on Kraskov *et al.*, "Estimating Mutual Information".'
 toc: true
@@ -15,9 +15,9 @@ This paper provide derivation of the Kozachenko-Leonenko entropy estimate along 
 
 This first formulation of mutual information estimation is implemented in scikit-learn: [`sklearn.feature_selection.mutual_info_regression`](http://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.mutual_info_regression.html) and [`sklearn.feature_selection.mutual_info_classif`](http://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.mutual_info_classif.html).
 
-## Intuition
+## Outline
 
-This section captures the intuition behind the derivation of the mutual information estimation for continuous variable.
+This section captures the outline behind the derivation of the mutual information estimation for continuous variable.
 Please refer to the original paper for detailed derivation.
 
 Let $Z=(X, Y)$ with density $\mu(x, y)$, the mutual information of $X$ and $Y$ is defined by
@@ -134,8 +134,8 @@ $^\dagger$ *Notice that this and the next equation in the [arXiv paper](https://
 
 ### Implementation
 
-In this subsection, I perform above calculation in python.
-The detailed calculation is available in [this notebook](https://github.com/zjpoh/zjpoh.github.io/blob/master/assets/notebooks/kraskov2003.ipynb).
+In this subsection, we perform above calculation in python.
+The detailed calculation is available in [this notebook](https://github.com/zjpoh/zjpoh.github.io/blob/master/assets/notebooks/kraskov2003/kraskov2003.ipynb).
 
 ```python
 n = x.size
@@ -186,10 +186,10 @@ Hence, $n_x(i)=5$.
 The green points are all the points within $y\pm\epsilon(i)/2$.
 Hence, $n_y(i)=5$.
 
-![](/assets/images/notebooks/kraskov2003/eq8.gif)
+![](/assets/notebooks/kraskov2003/plots/eq8.gif)
 
 The above calculation is then repeated for all data points.
-The mutual information is then calculated using $\ref{eq:8}$.
+The mutual information is then calculated using Eq. (\ref{eq:8}).
 
 ## Mutual Information Estimator - Second Formulation Based on Hyperrectangle
 
@@ -199,13 +199,15 @@ We will not define the second mutual information estimator here but the result i
 
 $$
   I^{(2)}(X, Y) = \psi(k) - 1/k - \langle \psi(n_x) + \psi(n_y) \rangle + \psi(N) \,.
+  \label{eq:9}
 $$
 
 Notice the above estimate takes into the rectangle shape into account in $H(X, Y)$ and neglect that in $H(X)$ and $H(Y)$, which introduce correction of $O(1/n_x)$ and $O(1/n_y)$ respectively.
 
 ### Implementation
 
-Section X of [this notebook](https://github.com/zjpoh/zjpoh.github.io/tree/master/assets/notebooks/kraskov2013.ipynb) contains my unsuccessful attempt to calculate mutual information using this second formulation.
+Section 4 of [this notebook](https://github.com/zjpoh/zjpoh.github.io/tree/master/assets/notebooks/kraskov/kraskov2013.ipynb) contains calculations of mutual information using this second formulation.
+However, I was not able to reproduce the results of the paper.
 
 ## Evaluating the Estimates
 
@@ -215,9 +217,47 @@ The exact mutual information of a two-dimensional Gaussian distribution with cor
 
 $$
   I(X, Y) = -\frac{1}{2} \log(\text{det}\sigma) \,.
+  \label{eq:exact}
 $$
 
-## My Thoughts
+In the following plot, we show mutual information as a function of covariance.
+The blue line is the exact calculation using Eq. (\ref{eq:exact}), the orange line is the mutual information estimate calculated with Eq. (\ref{eq:8}), while the reen line is the mutual information calculation implemented in sklearn.
+The plot shows that the estimate is in agreement with the exact value.
+
+![](/assets/notebooks/kraskov2003/plots/mi_v_r-eq8.png)
+
+In the next plot, we show the percentage different between the mutual information estimate and the exact value Eq. (\ref{eq:exact}),
+
+$$
+  \frac{I_\text{estimate} - I_\text{exact}}{I_\text{exact}} \,.
+$$
+
+The blue line is the difference between Eq. (\ref{eq:8}) and the exact value, while the orange line is the difference between sklearn calculation and the exact value.
+The plot shows that the error of the estimate decreases as the covariance of the data increases.
+However, the error can be rather big.
+Notice that the paper only shows the difference, not the percentage difference.
+When the value of MI is very small, a small difference can be translated to a big percentage difference.
+My calculation is slightly different from sklearn calculation because in sklearn, a small amount of noise is added to x [see here](https://github.com/scikit-learn/scikit-learn/blob/7ed61a24feb4ffde0bee9342acf4a58e3f946a61/sklearn/feature_selection/mutual_info_.py#L278).
+
+![](/assets/notebooks/kraskov2003/plots/mi_v_r-eq8-perct_diff.png)
+
+The next plot shows the percentage difference between mutual information estimate and the exact value for as a function of number of data points.
+The blue line is the exact value, the orange line is my calculation, while the green line is sklearn calculation.
+This plot shows that the error of the estimates decreases as the number of points increases.
+However for $n\gtrsim7500$, the error seems to dominated by systematic error.
+
+![](/assets/notebooks/kraskov2003/plots/mi_v_n-eq8-perct_diff.png)
+
+## Conclusion
+
+From the above plots, we can see that we should take the estimate with a grain of salt.
+The statistics error can be large when the number of data points is small.
+In addition, if correlation between the data is very small, the percentage error of the estimate can be large.
+Furthermore, the above plot is based on normal distributed data, which the exact mutual information is known.
+For other distribution, please refer to the [original paper](https://arxiv.org/abs/cond-mat/0305641) for more information.
+
+I wasn't able to reproduce correct mutual information estimate based on the second formulation, Eq. (\ref{eq:9}).
+Please let me raise an issue if you see any mistakes in my calculation.
 
 I do not really get the generalization of $H(X)$ to multi-dimension.
 However, the result of this paper is mainly empirical.

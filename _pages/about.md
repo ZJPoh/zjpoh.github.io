@@ -9,8 +9,10 @@ redirect_from:
 ---
 
 I'm ZJ Poh, a physics PhD, a data scientist, and an audiophile.
-I have two super cute dogs, Poka and Ponyo.
 I like endurance challenges (running and biking).
+I have two super cute dogs, Poka and Ponyo.
+
+![](/assets/images/poka_ponyo.JPG)
 
 I found it useful to reorganize the content of new things that I learn.
 So, this is where I reorganize and record them.
