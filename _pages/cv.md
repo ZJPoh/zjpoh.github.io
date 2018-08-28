@@ -11,10 +11,13 @@ redirect_from:
 
 Education
 ======
-* Ph.D in Physics, The Ohio State University, 2017
+* Ph.D in Physics, [The Ohio State University](https://physics.osu.edu/), 2017
+  * Thesis: *Model building in the LHC era: vector-like leptons and SUSY GUTs*
+  * Advisor: [Stuart Raby](http://inspirehep.net/author/profile/S.A.Raby.1)
   * Hazel Brown Outstanding Teaching Assistant Award, 2016
 * M.S. in Physics, The Ohio State University, 2016
-* B.S. in Mathematics, Physics, Ohio Wesleyan University, 2013
+* B.S. in Mathematics, Physics, [Ohio Wesleyan University](https://www.owu.edu/), 2013
+  * Advisors: [Brad Trees](https://www.owu.edu/academics/departments-programs/department-of-physics-and-astronomy/faculty-staff/brad-trees/), [Barbara S. Andereck](https://www.owu.edu/academics/departments-programs/department-of-physics-and-astronomy/faculty-staff/barbara-s-andereck/), [Jeffrey Nunemacher](https://www.owu.edu/academics/departments-programs/department-of-mathematics-and-computer-science/faculty-staff/jeffrey-l-nunemacher/)
   * *manga cum laude*, Physics Department Honors, University Honors
   * 1st place 2013 Four College Mathematics Competition
   * The Andrew and Mary Kozsuch, Sr. “Language of Mathematics” Scholarship (2010, 2011, 2012)

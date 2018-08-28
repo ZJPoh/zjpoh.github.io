@@ -9,8 +9,8 @@ author_profile: true
 
 ## Scikit-learn
 * 2018
-  * [WIP / Feature] Add weight to IsolationForest. [Issue #11835](https://github.com/scikit-learn/scikit-learn/issues/11835)
-  * [WIP / MAINT] Better error message for invalid metric in NearestNeighbors. [PR #11914](https://github.com/scikit-learn/scikit-learn/pull/11914)
+  * [Feature / WIP] Add weight to IsolationForest. [PR #11915](https://github.com/scikit-learn/scikit-learn/pull/11915)
+  * [ENH] Better error message for invalid metric in NearestNeighbors. [PR #11914](https://github.com/scikit-learn/scikit-learn/pull/11914)
   * [Feature] Add min FPR and min/max FPR to area under the roc curve. [PR #1725](https://github.com/scikit-learn/scikit-learn/pull/11725)
   * [MAINT] Update `np.ones` to `np.full`. [PR #11628](https://github.com/scikit-learn/scikit-learn/pull/11628)
 

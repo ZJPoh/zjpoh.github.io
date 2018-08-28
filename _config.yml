@@ -102,7 +102,7 @@ analytics:
 author:
   name             : "Zijie (ZJ) Poh"
   avatar           : "/assets/images/profile.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Data scientist and physics PhD."
+  bio              :
   location         : "SF, California"
   email            :
   uri              :
@@ -281,7 +281,7 @@ defaults:
       type: posts
     values:
       layout: single
-      author_profile: true
+      author_profile: false
       read_time: true
       comments: # true
       share: true
@@ -292,6 +292,6 @@ defaults:
       type: publications
     values:
       layout: single
-      author_profile: true
+      author_profile: false
       share: true
       comments: true
