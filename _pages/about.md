@@ -15,13 +15,9 @@ I hope everything here is correct and I'm sure not everything here is the best p
 Also, these post may include my own thoughts.
 
 I am an audiophile.
-I have a JH16 with JH3A.
-My favorite composers are Gustav Mahler, Dmitri Shostakovich, and Johannes Brahms.
-My favorite orchestra is Berliner Philharmoniker and Royal Concertgebouw.
-I also listen to a lot of K-pop.
-My favorite K-pop artists in alphabetical order are Cheeze, Davichi, GFriend, IU, Jeon Jin Hee, Lovelyz, Mamamoo, and WJSN.
+I listen to a very wide variety of songs.
 
-I also like endurance challenges (running and biking).
+I also like endurance challenges (running and biking) and snowboarding!
 I have two super cute dogs, Poka and Ponyo.
 
 ![](/assets/images/poka_ponyo.JPG)
