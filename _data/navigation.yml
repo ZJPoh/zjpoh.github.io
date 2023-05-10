@@ -2,15 +2,15 @@
 main:
   - title: "Blog Posts"
     url: /
-  - title: "CV"
-    url: /cv/
-  - title: "Publication"
-    url: /publications/
+  # - title: "CV"
+  #   url: /cv/
+  # - title: "Publication"
+  #   url: /publications/
   - title: "About"
     url: /about/
   # - title: "Sample Posts"
   #   url: /year-archive/
   # - title: "Sample Collections"
   #   url: /collection-archive/
-  - title: "Sitemap"
-    url: /sitemap/
+  # - title: "Sitemap"
+  #   url: /sitemap/

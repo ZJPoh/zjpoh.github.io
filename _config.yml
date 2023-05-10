@@ -18,7 +18,7 @@ minimal_mistakes_skin    : "dark" # "air", "aqua", "contrast", "dark", "dirt", "
 locale                   : "en-US"
 title                    : "Kodama"
 title_separator          : "-"
-name                     : "Zijie (ZJ) Poh"
+name                     : ""
 description              : "My Personal Blog."
 url                      : https://zjpoh.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
@@ -100,8 +100,8 @@ analytics:
 
 # Site Author
 author:
-  name             : "Zijie (ZJ) Poh"
-  avatar           : "/assets/images/profile.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  name             : ""
+  avatar           : "/assets/images/kodama.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              :
   location         : "SF, California"
   email            :
@@ -113,13 +113,13 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           : zjpoh
+  github           : # zjpoh
   gitlab           :
   google_plus      :
   keybase          :
   instagram        :
   lastfm           :
-  linkedin         : zijiepoh # "john-doe-12345678" (the last part of your profile url, e.g. https://www.linkedin.com/in/john-doe-12345678)
+  linkedin         : # zijiepoh # "john-doe-12345678" (the last part of your profile url, e.g. https://www.linkedin.com/in/john-doe-12345678)
   pinterest        :
   soundcloud       :
   stackoverflow    : # "123456/username" (the last part of your profile url, e.g. https://stackoverflow.com/users/123456/username)
@@ -130,7 +130,7 @@ author:
   weibo            :
   xing             :
   youtube          : # "https://youtube.com/c/MichaelRoseDesign"
-  inspire          : Z.Poh.1
+  inspire          : # Z.Poh.1
 
 
 # Reading Files
